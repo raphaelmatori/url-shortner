@@ -1,7 +1,7 @@
 package com.urlshortener.service
 
 import com.urlshortener.model.ShortUrl
-import com.urlshortener.model.ShortUrlRepository
+import com.urlshortener.repository.ShortUrlRepository
 import org.springframework.data.redis.core.StringRedisTemplate
 import org.springframework.stereotype.Service
 import java.util.concurrent.TimeUnit

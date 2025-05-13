@@ -1,6 +1,19 @@
 spring:
     data:
         mongodb:
-            host: mongo
-            port: 27017
-            database: urlshortener
+            uri: mongodb://mongo:27017/urlshortener
+            connection-timeout: 3000
+            socket-timeout: 3000
+            max-wait-time: 5000
+            connections-per-host: 100
+            threads-allowed-to-block-for-connection-multiplier: 10
+    server:
+        tomcat:
+            max-threads: 500
+            min-spare-threads: 50
+            connection-timeout: 20000
+    logging:
+        level:
+            root: INFO
+        pattern:
+            console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
